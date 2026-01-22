@@ -183,7 +183,7 @@ $reviews = [
 ];
 ?>
 
-<section class="py-24 bg-white relative">
+<section class="py-24 bg-[#e9ecef] relative">
     <div class="max-w-7xl mx-auto px-6">
         
         <div class="text-center max-w-3xl mx-auto mb-16">
@@ -239,7 +239,12 @@ $reviews = [
                 </button>
             </div>
 
+
+            
+
         </div>
+
+
     </div>
     
     <style>
@@ -294,15 +299,15 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 </script>
 
-<section class="py-12 px-6 bg-[#e9ecef]">
-    <div class="max-w-7xl mx-auto rounded-[3rem] p-12 md:p-20 overflow-hidden relative">
-        <div class="absolute top-0 right-0 w-1/2 h-full"></div>
+<section class="py-4 px-6 pt-12 pb-12 bg-white">
+    <div class="max-w-7xl mx-auto rounded-[3rem] p-8 pl-4 overflow-hidden sm:pl-8 relative">
         
         <div class="relative z-14 max-w-2xl pl-[6px]">
             <h2 class="text-5xl md:text-6xl font-black text-black mb-6">Start your future <span class="text-orange-500 text-outline">today</span></h2>
             <p class="text-stone-900 text-lg mb-10">Join a community of lifelong learners and get the support you need to reach your career goals.</p>
             <div class="flex flex-wrap gap-4">
-                <a href="/courses" class="bg-orange-600 hover:bg-orange-500 text-white px-8 py-4 rounded-full font-bold transition-all shadow-lg shadow-orange-600/20">Get Started Now</a>
+                <!-- Buttons -->
+                <a href="/courses" class="bg-orange-600 hover:bg-orange-500 text-white px-8 py-4 rounded-full font-bold transition-all shadow-lg shadow-orange-600/20">Get Started</a>
                 <a href="/contact" class="bg-orange-600 hover:bg-orange-500 text-white backdrop-blur-md px-8 py-4 rounded-full font-bold transition-all">Contact Us</a>
             </div>
         </div>

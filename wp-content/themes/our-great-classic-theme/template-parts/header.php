@@ -154,7 +154,7 @@
 
         <div class="mt-10 pt-6 border-t border-white/10">
             <p class="text-white/40 text-[11px] uppercase tracking-[0.2em] font-black">Ready to learn?</p>
-            <a href="/courses" class="inline-block mt-3 text-orange-400 font-extrabold text-lg group">
+            <a href="<?php echo get_permalink(wc_get_page_id('shop') );?>" class="inline-block mt-3 text-orange-400 font-extrabold text-lg group">
                 Explore our courses <span class="inline-block transition-transform group-hover:translate-x-1">→</span>
             </a>
         </div>

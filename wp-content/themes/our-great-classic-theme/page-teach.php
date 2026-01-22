@@ -132,8 +132,8 @@ get_template_part('template-parts/header');
     </div>
 </div>
 
-<section class="py-12 px-6 bg-white">
-    <div class="max-w-7xl mx-auto rounded-[3rem] p-12 md:p-20 overflow-hidden relative">
+<section class="py-4 px-6 pt-6 pt-12 pb-12 bg-white">
+    <div class="max-w-7xl mx-auto rounded-[3rem] p-8 pl-4 sm:pl-8 overflow-hidden relative">
         <div class="absolute top-0 right-0 w-1/2 h-full"></div>
         
         <div class="relative z-14 max-w-2xl pl-[6px]">
@@ -141,7 +141,7 @@ get_template_part('template-parts/header');
             <p class="text-stone-900 text-lg mb-10">Whether you're an experienced instructor or trying teaching for the first time, our team is here to support you every step of the way. </p>
             <div class="flex flex-wrap gap-4">
                 <a href="<?php echo get_permalink( get_page_by_path('contact-us')) ; ?>" class="bg-orange-600 hover:bg-orange-500 text-white px-8 py-4 rounded-full font-bold transition-all shadow-lg shadow-orange-600/20">Contact Us</a>
-                <a href="<?php echo get_permalink( wc_get_page_id('shop')); ?>" class="bg-orange-600 hover:bg-orange-500 text-white backdrop-blur-md px-8 py-4 rounded-full font-bold transition-all">Browse Current Courses</a>
+                <a href="<?php echo get_permalink( wc_get_page_id('shop')); ?>" class="bg-orange-600 hover:bg-orange-500 text-white backdrop-blur-md px-8 py-4 rounded-full font-bold transition-all">Courses</a>
             </div>
         </div>
     </div>
