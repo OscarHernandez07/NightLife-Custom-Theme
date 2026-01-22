@@ -1,0 +1,764 @@
+/* =========================================
+   GLOBAL STYLES
+========================================= */
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f9fafb;
+    color: #222;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* =========================================
+   HEADER
+========================================= */
+
+/* ====== Header ====== */
+.site-header {
+    background: linear-gradient(90deg, #ff4b2b, #ff416c);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.logo a {
+    color: white;
+    text-decoration: none;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+/* ===== Horizontal navbar ===== */
+.site-nav {
+    display: flex;
+    align-items: center;
+}
+
+.site-nav .menu {
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.site-nav .menu li {
+    list-style: none;
+    position: relative;
+}
+
+.site-nav .menu li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    position: relative;
+    padding: 5px 0;
+    transition: color 0.3s;
+}
+
+/* Cool underline effect */
+.site-nav .menu li a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 0;
+    background: white;
+    transition: width 0.3s;
+}
+
+.site-nav .menu li a:hover::after {
+    width: 100%;
+}
+
+.site-nav .menu li a:hover {
+    color: #000;
+}
+
+/* ===== Hamburger for mobile ===== */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.hamburger span {
+    height: 3px;
+    width: 25px;
+    background: white;
+    border-radius: 3px;
+}
+
+/* ===== Responsive Mobile ===== */
+@media (max-width: 768px) {
+    .site-nav {
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: linear-gradient(90deg, #ff4b2b, #ff416c);
+        width: 200px;
+        flex-direction: column;
+        transform: translateX(100%);
+        transition: transform 0.3s ease;
+        padding: 20px;
+    }
+
+    .site-nav.active {
+        transform: translateX(0);
+    }
+
+    .site-nav .menu {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+}
+
+
+/* =========================================
+   HERO SECTION
+========================================= */
+
+/* ===== HERO SECTION ===== */
+.hero {
+    height: 21rem;
+    background: linear-gradient(135deg, #ffffff, #ff416c);
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.55);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+    margin: 0; 
+}
+
+.hero-content h2 {
+    margin: 0;
+}
+
+.hero-content p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+/* Hero button */
+.btn {
+    background: white;
+    color: #ff4b2b;
+    padding: 12px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #ff4b2b;
+    color: white;
+}
+
+/* Updates section inside hero */
+.updates {
+    position: relative;
+    z-index: 2;
+    padding-top: 20px;
+}
+
+
+/* ===== Our Courses Section ===== */
+.our-courses-mainPg {
+    padding: 80px 20px;
+    background: #f9f9f9;
+    text-align: center;
+}
+
+.our-courses-mainPg h2 {
+    font-size: 40px;
+    color: #ff4b2b;
+    margin-bottom: 50px;
+    font-weight: 700;
+}
+
+/* Container for the two columns */
+.course-columns {
+    display: flex !important;
+    gap: 40px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Individual Column Card */
+.course-column {
+    flex: 1 1 45%;
+    background: #fff;
+    border-radius: 20px;
+    padding: 35px 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left;
+}
+
+.course-column:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+/* Paragraph inside column */
+.course-column p {
+    font-size: 17px;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 25px;
+}
+
+/* Button inside column */
+.course-column .btn {
+    display: inline-block;
+    background: #ff4b2b;
+    color: #fff;
+    padding: 14px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.course-column .btn:hover {
+    background: #ff416c;
+}
+
+/* Features List */
+.course-features {
+    list-style: none;
+    padding: 0;
+    font-size: 16px;
+    color: #555;
+}
+
+.course-features li {
+    margin-bottom: 18px;
+    padding-left: 25px;
+    position: relative;
+}
+
+/* Custom checkmark bullets */
+.course-features li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #ff4b2b;
+    font-weight: bold;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .course-columns {
+        gap: 30px;
+    }
+
+    .course-column {
+        flex: 1 1 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .our-courses-mainPg {
+        padding: 50px 15px;
+    }
+
+    .our-courses-mainPg h2 {
+        font-size: 32px;
+    }
+
+    .course-column p,
+    .course-features li {
+        font-size: 15px;
+    }
+
+    .course-column .btn {
+        padding: 12px 25px;
+        font-size: 15px;
+    }
+}
+
+
+
+
+/* ===== RESPONSIVE MEDIA QUERIES ===== */
+
+/* Tablets */
+@media (max-width: 992px) {
+    .hero {
+        padding: 80px 20px;
+        height: auto;
+    }
+
+    .hero-content h1 {
+        font-size: 38px;
+    }
+
+    .hero-content p {
+        font-size: 18px;
+    }
+
+    .btn {
+        padding: 10px 20px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .hero {
+        padding: 60px 15px;
+    }
+
+    .hero-content h1 {
+        font-size: 28px;
+    }
+
+    .hero-content p {
+        font-size: 16px;
+    }
+
+    .btn {
+        padding: 8px 18px;
+        font-size: 14px;
+    }
+}
+
+/* Small mobile devices */
+@media (max-width: 480px) {
+    .hero {
+        padding: 50px 10px;
+    }
+
+    .hero-content h1 {
+        font-size: 24px;
+    }
+
+    .hero-content p {
+        font-size: 14px;
+    }
+
+    .btn {
+        padding: 6px 15px;
+        font-size: 13px;
+    }
+}
+
+/* ================================== */
+/* ABOUT US */
+/* ================================== */
+
+.about-us {
+    padding: 80px 20px;
+    background: #f9f9f9;
+    text-align: center;
+}
+
+.about-us h2 {
+    font-size: 36px;
+    color: #ff4b2b;
+    margin-bottom: 10px;
+}
+
+.about-content {
+    max-width: 900px;
+    margin: 0 auto;
+    font-size: 21px;
+    line-height: 1.7;
+
+    color: rgb(0, 0, 0);
+}
+
+.about-content p {
+    margin-bottom: 20px;
+}
+
+
+
+/* =========================================
+   LATEST POSTS SECTION
+========================================= */
+
+.latest-posts {
+    padding: 60px 0;
+    background: #f8f8f8;
+    text-align: center;
+}
+
+.latest-posts h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+}
+
+.posts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.post-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.post-card:hover {
+    transform: translateY(-8px);
+}
+
+.post-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.post-card h3 {
+    margin: 15px 0 10px;
+    color: #ff4b2b;
+}
+
+.post-card p {
+    color: #555;
+    padding: 0 15px 20px;
+    font-size: 14px;
+}
+
+
+
+/* =========================================
+   PAGE HERO
+========================================= */
+
+.page-hero {
+    background: linear-gradient(135deg, #ff416c, #ff4b2b);
+    color: white;
+    text-align: center;
+    padding: 100px 20px 80px;
+}
+
+.page-hero h1 {
+    font-size: 48px;
+    margin: 0;
+}
+
+.page-hero .tagline {
+    font-size: 18px;
+    margin-top: 10px;
+    opacity: 0.9;
+}
+
+/* =========================================
+   PAGE CONTENT
+========================================= */
+
+.page-content {
+    padding: 60px 0;
+    background: #f9f9f9;
+}
+
+.page-article {
+    background: white;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 50px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    animation: fadeIn 0.6s ease forwards;
+}
+
+.page-type {
+    color: #ff4b2b;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.page-article h2 {
+    color: #ff4b2b;
+    margin-top: 0;
+}
+
+.page-article .content p {
+    line-height: 1.7;
+    color: #333;
+}
+
+/* =========================================
+   PET CARD (EXTRA CONTENT)
+========================================= */
+
+.pet-card {
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    padding: 30px;
+    margin-bottom: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pet-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.pet-tag {
+    color: #ff4d4d;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+}
+
+.pet-title {
+    font-size: 28px;
+    margin: 10px 0 20px;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+}
+
+.pet-content {
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.site-footer {
+    background: #111;
+    color: #fff;
+    text-align: center;
+    padding: 20px 10px;
+    font-size: 14px;
+    border-top: 3px solid #ff4d4d;
+}
+
+/* =========================================
+   ANIMATIONS
+========================================= */
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+
+/* ============================== */
+/* PET CARDDDDDDD */
+/* ============================== */
+
+
+/* Page Container */
+.page-container {
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+/* Pet Card Section */
+.pet-card {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 18px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    transition: 0.3s ease;
+    border-left: 6px solid #ff416c;
+}
+
+.pet-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 35px rgba(0, 0, 0, 0.13);
+}
+
+/* Tag at the top */
+.pet-tag {
+    display: inline-block;
+    background: #ff416c15;
+    color: #ff416c;
+    padding: 6px 14px;
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+/* Title */
+.pet-title {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #222;
+}
+
+/* Content */
+.pet-content {
+    font-size: 18px;
+    line-height: 1.7;
+    color: #444;
+}
+
+/* Make images inside WordPress content look good */
+.pet-content img {
+    max-width: 100%;
+    border-radius: 12px;
+    margin: 20px 0;
+}
+
+/* Buttons added inside content */
+.pet-content a.button,
+.pet-content .wp-block-button__link {
+    background: #ff416c;
+    color: #fff !important;
+    padding: 12px 24px;
+    border-radius: 30px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 15px;
+    transition: 0.3s;
+}
+
+.pet-content a.button:hover,
+.pet-content .wp-block-button__link:hover {
+    background: #ff4b2b;
+}
+
+/* Responsive */
+@media(max-width: 768px) {
+    .pet-card {
+        padding: 25px;
+    }
+
+    .pet-title {
+        font-size: 26px;
+    }
+
+    .pet-content {
+        font-size: 16px;
+    }
+}
+
+
+/* ============================= */
+/* Styling the form */
+/* ============================= */
+
+/* Styles only for your Contact page */
+.page-id-58 .entry-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: #f8f8f8;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Headings and paragraphs */
+.page-id-58 h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #222;
+}
+
+.page-id-58 p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* WPForms styling */
+.page-id-58 .wpforms-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.page-id-58 .wpforms-form input,
+.page-id-58 .wpforms-form textarea,
+.page-id-58 .wpforms-form select {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.page-id-58 .wpforms-form button[type="submit"] {
+    background-color: #0073aa;
+    color: #fff;
+    padding: 12px 20px;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.page-id-58 .wpforms-form button[type="submit"]:hover {
+    background-color: #005177;
+}
