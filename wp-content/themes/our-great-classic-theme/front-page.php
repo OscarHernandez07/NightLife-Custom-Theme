@@ -1,4 +1,6 @@
+<!-- Calls the header and hero -->
 <?php get_template_part('template-parts/header'); ?>
+<!-- Hero -->
 <?php get_template_part('template-parts/hero'); ?>
 
 
@@ -18,7 +20,7 @@
                     Master New Skills with <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-600 to-orange-400">Our Expert Courses</span>
                 </h2>
             </div>
-            <a href="<?php echo get_permalink( wc_get_page_id( 'shop' ) ); ?>" class="text-slate-900 font-bold border-b-2 border-orange-500 pb-1 hover:text-orange-600 transition-colors">
+            <a href="<?php echo get_permalink( wc_get_page_id( 'shop' ) ); ?>" class="inline-flex w-fit text-slate-900 font-bold border-b-2 border-orange-500 pb-1 hover:text-orange-600 transition-colors">
                 View All Courses &rarr;
             </a>
         </div>
@@ -90,7 +92,6 @@
 <section class="py-24 bg-white">
     <div class="max-w-7xl mx-auto px-6">
         <div class="grid lg:grid-cols-2 gap-16 items-center">
-            
             <div>
                 <h2 class="text-4xl md:text-5xl font-black text-slate-900 mb-8 leading-tight">
                     Why Professionals Choose <span class="text-orange-600">Our Academy</span>
@@ -131,14 +132,12 @@
 
 <section class="bg-[#6a994e] py-8 md:py-8 text-white">
     <div class="max-w-7xl mx-auto px-6">
-        
         <div class="text-center mb-10 md:mb-20">
             <span class="text-yellow-300 font-bold tracking-[0.3em] uppercase text-xs md:text-sm mb-4 block">Our Proven Results</span>
             <h2 class="text-2xl md:text-3xl font-black uppercase tracking-tight">By the Numbers</h2>
         </div>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-y-16 gap-x-8 text-center">
-            
             <div class="flex flex-col items-center">
                 <span class="text-6xl md:text-6xl font-black tracking-tighter mb-4">15k+</span>
                 <p class="text-sm md:text-lg font-bold opacity-80 uppercase tracking-widest leading-tight max-w-[160px]">
@@ -166,7 +165,6 @@
                     Industry Expert Mentors
                 </p>
             </div>
-
         </div>
     </div>
 </section>
@@ -185,7 +183,6 @@ $reviews = [
 
 <section class="py-24 bg-[#e9ecef] relative">
     <div class="max-w-7xl mx-auto px-6">
-        
         <div class="text-center max-w-3xl mx-auto mb-16">
             <span class="text-blue-600 font-bold tracking-widest uppercase text-sm mb-3 block">Testimonials</span>
             <h2 class="text-4xl font-black text-slate-900 mb-4">What Our Students Say</h2>
@@ -193,15 +190,12 @@ $reviews = [
         </div>
 
         <div class="relative group">
-            
             <div id="review-track" 
                 class="flex gap-4 overflow-x-auto py-6 md:py-14 snap-x snap-mandatory scroll-smooth" 
                 style="scrollbar-width: none; -ms-overflow-style: none;">
 
-                
                 <?php foreach ($reviews as $index => $review) : ?>
                 <div class="min-w-[300px] md:min-w-[400px] bg-white p-8 rounded-3xl shadow-sm border border-slate-100 flex flex-col snap-center relative hover:shadow-lg transition-shadow duration-300">
-
 
                     <div class="flex text-orange-400 mb-6">
                         <?php for($i=0; $i<5; $i++): ?>
@@ -227,7 +221,6 @@ $reviews = [
                     </div>
                 </div>
                 <?php endforeach; ?>
-
             </div>
 
             <div class="flex justify-center items-center gap-4 mt-8">
@@ -238,13 +231,7 @@ $reviews = [
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg>
                 </button>
             </div>
-
-
-            
-
         </div>
-
-
     </div>
     
     <style>
@@ -253,6 +240,7 @@ $reviews = [
 </section>
 
 <script>
+//Buttons so they can click back and forth 
 document.addEventListener('DOMContentLoaded', () => {
     const track = document.getElementById('review-track');
     const prevBtn = document.getElementById('slide-prev');
@@ -299,21 +287,44 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 </script>
 
+<!-- Call to action at the bottom of the website -->
 <section class="py-4 px-6 pt-12 pb-12 bg-white">
     <div class="max-w-7xl mx-auto rounded-[3rem] p-8 pl-4 overflow-hidden sm:pl-8 relative">
         
+        <!-- Info text -->
         <div class="relative z-14 max-w-2xl pl-[6px]">
             <h2 class="text-5xl md:text-6xl font-black text-black mb-6">Start your future <span class="text-orange-500 text-outline">today</span></h2>
             <p class="text-stone-900 text-lg mb-10">Join a community of lifelong learners and get the support you need to reach your career goals.</p>
             <div class="flex flex-wrap gap-4">
                 <!-- Buttons -->
-                <a href="/courses" class="bg-orange-600 hover:bg-orange-500 text-white px-8 py-4 rounded-full font-bold transition-all shadow-lg shadow-orange-600/20">Get Started</a>
-                <a href="/contact" class="bg-orange-600 hover:bg-orange-500 text-white backdrop-blur-md px-8 py-4 rounded-full font-bold transition-all">Contact Us</a>
+                <a href="/courses" class="group inline-flex items-center justify-center bg-orange-600 text-white font-bold text-lg px-6 py-4 rounded-xl shadow-[0_0_20px_rgba(234,88,12,0.5)] hover:bg-orange-500 hover:shadow-[0_0_30px_rgba(234,88,12,0.6)] hover:-translate-y-1 transition-all duration-300">Get Started</a>
+                <a href="/contact" class="group inline-flex items-center justify-center bg-orange-600 text-white font-bold text-lg px-6 py-4 rounded-xl shadow-[0_0_20px_rgba(234,88,12,0.5)] hover:bg-orange-500 hover:shadow-[0_0_30px_rgba(234,88,12,0.6)] hover:-translate-y-1 transition-all duration-300">Contact Us</a>
             </div>
         </div>
     </div>
 </section>
 
+<!-- Footer -->
 <?php get_template_part('template-parts/footer'); ?>
 
 
+
+
+<script>
+        const nav = document.getElementById('main-nav');
+    // The Scrol event listener 
+    window.addEventListener('scroll' , () => {
+        if (window.scrollY > 50) {
+            //This adds the color and the showed when you scroll down
+            nav.classList.add('bg-[#0B4B7F]', 'shadow-[0_10px_30px_rgba(0,0,0,0.2)]');
+            nav.classList.remove('py-7', 'bg-transparent');
+            nav.classList.add('py-3'); 
+        }
+
+        else {
+            // it reverts it to the transparent at the top
+            nav.classList.remove('bg-[#0B4B7F]', 'shadow-[0_10px_30px_rgba(0,0,0,0.2)]', 'py-3');
+            nav.classList.add('py-7', 'bg-transparent');
+        }
+    })
+</script>

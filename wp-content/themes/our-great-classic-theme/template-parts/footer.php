@@ -33,19 +33,44 @@
                     <!-- Social media icons -->
                     <div class="flex space-x-3 pt-2">
                         <!-- Facebook icon -->
-                        <a href="#" class="group w-10 h-10 bg-white/10 hover:bg-white rounded-xl flex items-center justify-center transition-all duration-300">
+                       <a href="#" class="group w-10 h-10 bg-white/10 hover:bg-white rounded-xl flex items-center justify-center transition-all duration-300">
                             <span class="sr-only">Facebook</span>
-                            <!-- sr-only keeps it accessible without showing text -->
+
+                            <!-- Facebook icon -->
+                            <svg class="w-5 h-5 text-white group-hover:text-blue-600 transition-colors"
+                                fill="currentColor"
+                                viewBox="0 0 24 24"
+                                aria-hidden="true">
+                                <path d="M22.675 0h-21.35C.597 0 0 .597 0 1.326v21.348C0 23.403.597 24 1.326 24h11.495v-9.294H9.691V11.01h3.13V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.796.715-1.796 1.763v2.314h3.587l-.467 3.696h-3.12V24h6.116C23.403 24 24 23.403 24 22.674V1.326C24 .597 23.403 0 22.675 0z"/>
+                            </svg>
                         </a>
+
 
                         <!-- Twitter Icon -->
                         <a href="#" class="group w-10 h-10 bg-white/10 hover:bg-white rounded-xl flex items-center justify-center transition-all duration-300">
                             <span class="sr-only">Twitter</span>
+
+                            <svg class="w-5 h-5 text-white group-hover:text-black transition-colors"
+                                viewBox="0 0 24 24"
+                                fill="currentColor"
+                                aria-hidden="true">
+                                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24h-6.658l-5.214-6.817-5.96 6.817H1.686l7.73-8.835L1.25 2.25h6.827l4.713 6.231 5.454-6.231zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77z"/>
+                            </svg>
                         </a>
+
 
                         <!-- Instagram Icon -->
                         <a href="#" class="group w-10 h-10 bg-white/10 hover:bg-white rounded-xl flex items-center justify-center transition-all duration-300">
                             <span class="sr-only">Instagram</span>
+
+                               <svg class="w-6 h-6 text-white group-hover:text-pink-500 transition-colors"
+                                fill="currentColor"
+                                viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg"
+                                aria-hidden="true">
+                                <path d="M7 2C4.24 2 2 4.24 2 7v10c0 2.76 2.24 5 5 5h10c2.76 0 5-2.24 5-5V7c0-2.76-2.24-5-5-5H7zm10 2c1.65 0 3 1.35 3 3v10c0 1.65-1.35 3-3 3H7c-1.65 0-3-1.35-3-3V7c0-1.65 1.35-3 3-3h10zm-5 3a5 5 0 100 10 5 5 0 000-10zm0 2a3 3 0 110 6 3 3 0 010-6zm4.5-.75a1.25 1.25 0 11-2.5 0 1.25 1.25 0 012.5 0z"/>
+                                
+                            </svg>
                         </a>
                     </div>
                 </div>

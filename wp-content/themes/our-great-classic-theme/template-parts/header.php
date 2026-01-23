@@ -77,7 +77,7 @@
 
 <body <?php body_class("bg-gray-50 antialiased font-sans"); ?>>
 
-<nav id="main-nav" class="bg-[#0B4B7F] fixed top-0 w-full z-50 py-5 shadow-[0_10px_30px_rgba(0,0,0,0.2)]">
+<nav id="main-nav" class="fixed top-0 w-full z-50 py-5 <?php echo is_front_page() ?  "bg-transparent" :  "bg-[#0B4B7F]" ; ?> transition-all duration-300">
     <div class="max-w-7xl flex items-center justify-between mx-auto px-6 lg:px-8">
 
         <a href="<?php echo home_url(); ?>" class="flex items-center space-x-3 shrink-0">
@@ -163,11 +163,20 @@
 
 
 <script>
-    // Removed scroll listener logic completely to stop resizing.
-    
     const menuToggle = document.getElementById('menu-toggle');
     const mobileMenu = document.getElementById('mobile-menu');
     const menuIcon = document.getElementById('menu-icon');
+    
+
+
+
+    
+
+    // Removed scroll listener logic completely to stop resizing.
+    
+    // const menuToggle = document.getElementById('menu-toggle');
+    // const mobileMenu = document.getElementById('mobile-menu');
+    // const menuIcon = document.getElementById('menu-icon');
 
     // Handle Mobile Menu Toggle
     menuToggle.addEventListener('click', () => {
@@ -175,4 +184,5 @@
         // Switch between Burger and X icon
         menuIcon.setAttribute('d', isOpen ? 'M6 18L18 6M6 6l12 12' : 'M4 6h16M4 12h16M4 18h16');
     });
+
 </script>

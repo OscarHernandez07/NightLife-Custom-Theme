@@ -140,8 +140,8 @@ get_template_part('template-parts/header');
             <h2 class="text-5xl md:text-6xl font-black text-black mb-6">Ready to <span class="text-orange-500 text-outline">start?</span></h2>
             <p class="text-stone-900 text-lg mb-10">Whether you're an experienced instructor or trying teaching for the first time, our team is here to support you every step of the way. </p>
             <div class="flex flex-wrap gap-4">
-                <a href="<?php echo get_permalink( get_page_by_path('contact-us')) ; ?>" class="bg-orange-600 hover:bg-orange-500 text-white px-8 py-4 rounded-full font-bold transition-all shadow-lg shadow-orange-600/20">Contact Us</a>
-                <a href="<?php echo get_permalink( wc_get_page_id('shop')); ?>" class="bg-orange-600 hover:bg-orange-500 text-white backdrop-blur-md px-8 py-4 rounded-full font-bold transition-all">Courses</a>
+                <a href="<?php echo get_permalink( get_page_by_path('contact-us')) ; ?>" class="group inline-flex items-center justify-center bg-orange-600 text-white font-bold text-lg px-6 py-4 rounded-xl shadow-[0_0_20px_rgba(234,88,12,0.5)] hover:bg-orange-500 hover:shadow-[0_0_30px_rgba(234,88,12,0.6)] hover:-translate-y-1 transition-all duration-300">Contact Us</a>
+                <a href="<?php echo get_permalink( wc_get_page_id('shop')); ?>" class="group inline-flex items-center justify-center bg-orange-600 text-white font-bold text-lg px-6 py-4 rounded-xl shadow-[0_0_20px_rgba(234,88,12,0.5)] hover:bg-orange-500 hover:shadow-[0_0_30px_rgba(234,88,12,0.6)] hover:-translate-y-1 transition-all duration-300">Courses</a>
             </div>
         </div>
     </div>
