@@ -6,7 +6,7 @@
 get_template_part('template-parts/header');
 global $product;
 ?>
-
+<!-- Main section -->
 <section class="pt-20 pb-0 bg-white relative overflow-hidden">
     <div class="relative max-w-7xl mx-auto px-6 lg:px-8">
         <!-- Header Content -->
@@ -16,6 +16,7 @@ global $product;
                 Learn More About This Course <br>
                 <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-600 to-orange-400">Deep Dive Into the Material</span>
             </h1>
+            <!-- Description -->
             <p class="text-xl text-stone-900 leading-relaxed max-w-2xl">
                 Discover everything you need to know about this course, including curriculum, pricing, and enrollment options. Get all the details before you start learning.
             </p>
@@ -23,6 +24,7 @@ global $product;
     </div>
 </section>
 
+<!-- Secondary div -->
 <div class="bg-white py-12">
   <div class="max-w-6xl mx-auto px-4">
 
@@ -96,4 +98,5 @@ global $product;
   </div>
 </div>
 
+<!-- Footer -->
 <?php get_template_part('template-parts/footer'); ?>

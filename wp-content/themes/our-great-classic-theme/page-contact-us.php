@@ -2,15 +2,17 @@
 /* Template Name: Contact Page */
 get_template_part('template-parts/header'); 
 ?>
-
-<section class="pt-20 lg:pt-28 bg-white relative overflow-hidden">
+<!-- The main section  -->
+<section class="pt-28 lg:pt-28 bg-white relative overflow-hidden">
     <div class="relative max-w-7xl mx-auto px-6 lg:px-8">
         <div class="max-w-3xl">
+            <!-- Title of page-->
             <span class="text-orange-600 font-bold tracking-widest uppercase text-sm mb-4 mt-4 block">Get In Touch</span>
             <h1 class="text-5xl md:text-7xl font-black tracking-tight text-slate-900 mb-6">
                 Contact Our Team <br>
                 <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-600 to-orange-400">We’re Here to Help</span>
             </h1>
+            <!-- Description of the page -->
             <p class="text-xl text-slate-600 leading-relaxed max-w-2xl">
                 Have questions or want to learn more about our programs? Reach out to us and our team will get back to you as soon as possible.
             </p>
@@ -18,16 +20,19 @@ get_template_part('template-parts/header');
     </div>
 </section>
 
+<!-- Second section  -->
 <div class="bg-slate-50 py-12 md:py-20">
     <div class="max-w-4xl mx-auto px-4 md:px-6">
         <div class="bg-white rounded-[2.5rem] shadow-2xl shadow-slate-200/60 p-8 md:p-16 border border-slate-200">
             
             <div class="mb-10">
+                <!-- Text that ask to "Send us a Message" -->
                 <h2 class="text-2xl font-bold text-slate-900 mb-2">Send us a Message</h2>
                 <div class="h-1 w-[220px] bg-orange-500 rounded-full"></div>
             </div>
-
+            <!-- Calls the form by the id -->
             <div class="modern-form-wrapper">
+                <!-- prints the form -->
                 <?php echo do_shortcode('[form id="19789"]'); ?>
             </div>
 
@@ -77,4 +82,5 @@ get_template_part('template-parts/header');
     }
 </style>
 
+<!-- Calls the footer -->
 <?php get_template_part('template-parts/footer'); ?>

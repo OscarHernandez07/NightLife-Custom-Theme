@@ -3,14 +3,17 @@
 get_template_part('template-parts/header'); 
 ?>
 
-<section class="pt-20 lg:pt-32 bg-white relative overflow-hidden border-b border-slate-100">
+<!-- Main section of the page -->
+<section class="pt-28 lg:pt-28 bg-white relative overflow-hidden">
     <div class="relative max-w-7xl mx-auto px-6 lg:px-8">
         <div class="max-w-3xl mb-12">
+            <!-- Title of the page -->
             <span class="text-orange-600 font-bold tracking-widest uppercase text-sm mb-4 block">Calendar & Events</span>
             <h1 class="text-5xl md:text-7xl font-black tracking-tight text-slate-900 mb-6">
                 Stay on Track <br>
                 <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-600 to-orange-400">All Upcoming Events</span>
             </h1>
+            <!-- Info of the page -->
             <p class="text-xl text-slate-600 leading-relaxed max-w-2xl">
                 Keep up with all our upcoming programs, workshops, and important dates. Plan ahead and never miss an event.
             </p>
@@ -18,6 +21,7 @@ get_template_part('template-parts/header');
     </div>
 </section>
 
+<!-- This displays the calendar on the page -->
 <article class="bg-slate-50 py-12 md:py-20">
     <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
         <div class="bg-white rounded-[2.5rem] shadow-2xl shadow-slate-200/60 border border-slate-200 overflow-hidden p-4 md:p-8">
@@ -118,7 +122,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // Google Data (Exact same as your working code)
         googleCalendarApiKey: 'AIzaSyCleR5hROa8zwK8FmFmFYa2MJ_2w_yTFkk',
         events: {
-            googleCalendarId: 'caf3f1dfff55c7f9b0c3ce88aeb20714c33bc070639e05f9a0d729a166d8e285@group.calendar.google.com'
+            googleCalendarId: 'c_2502989900ee423752beff030c184bbfcc168855be3d453901295e3c7aaeb8c1@group.calendar.google.com'
         },
         
         eventClick: function(info) {
@@ -142,4 +146,5 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 </script>
 
+<!-- Calls he footer -->
 <?php get_template_part('template-parts/footer'); ?>

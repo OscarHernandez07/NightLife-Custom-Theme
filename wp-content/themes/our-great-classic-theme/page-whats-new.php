@@ -1,8 +1,16 @@
-<?php
+
+<!-- ======== PAGE NOT IN USE ======== -->
+
+
+<!-- <?php
 /* Template Name: News & Updates (Editorial)
 */
 get_template_part('template-parts/header');
 ?>
+
+
+
+
 
 <main class="bg-[#F9FAFB] min-h-screen font-sans antialiased">
     <header class="pt-24 pb-16 border-b border-gray-200 bg-white">
@@ -106,4 +114,4 @@ get_template_part('template-parts/header');
     </div>
 </main>
 
-<?php get_template_part('template-parts/footer'); ?>
+<?php get_template_part('template-parts/footer'); ?> -->

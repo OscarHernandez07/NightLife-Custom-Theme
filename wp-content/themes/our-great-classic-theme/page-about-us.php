@@ -12,6 +12,8 @@ Template Name: About Us Page
 get_header();
 ?>
 
+<!-- ======== PAGE NOT IN USE ======== -->
+
 <main class="bg-gradient-to-b from-gray-50 to-gray-100 min-h-screen py-20">
 
     <div class="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -105,7 +107,6 @@ get_header();
     </div>
 </main>
 
-<?php get_footer(); ?>
 
 
 

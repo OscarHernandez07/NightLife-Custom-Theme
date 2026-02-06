@@ -5,16 +5,17 @@
 
 get_template_part('template-parts/header');
 ?>
-
-<section class="pt-20 lg:pt-28 bg-white relative overflow-hidden pb-10">
-   
+<!--Hero of this page -->
+<section class="pt-28 lg:pt-28 bg-white relative overflow-hidden pb-10">
     <div class="relative max-w-7xl mx-auto px-6 lg:px-8">
         <div class="max-w-3xl">
+            <!-- Title of th page -->
             <span class="text-orange-600 font-bold tracking-widest uppercase text-sm mb-4 mt-4 block">Join Our Faculty</span>
             <h1 class="text-5xl md:text-6xl font-black tracking-tight text-slate-900 mb-6">
                 Share Your Knowledge <br>
                 <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-600 to-orange-400">Inspire the Future</span>
             </h1>
+            <!-- Description -->
             <p class="text-xl text-stone-900 leading-relaxed max-w-2xl">
                 Become a part of our teaching community. We are looking for passionate professionals ready to shape the next generation of experts.
             </p>
@@ -22,14 +23,16 @@ get_template_part('template-parts/header');
     </div>
 </section>
 
-<div class="bg-[#e9ecef] py-20 relative">
+<!-- Second section -->
+<div class="bg-[#f8f9fa] py-20 relative">
     <div class="max-w-7xl mx-auto px-6 lg:px-8">
 
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">
 
-            <div class="lg:col-span-7 flex flex-col gap-12">
+            <div class="lg:col-span-7 flex flex-col gap-16">
 
-                <div class="prose prose-lg prose-slate max-w-none prose-headings:font-black prose-headings:text-slate-900 prose-a:text-orange-600 hover:prose-a:text-orange-500">
+            <!-- This calls the certain content from the page -->
+                <div class="prose prose-lg prose-slate max-w-none prose-headings:font-black prose-headings:text-slate-900 prose-a:text-orange-600">
                     <?php 
                     while ( have_posts() ) : the_post(); 
                         the_content(); 
@@ -37,114 +40,188 @@ get_template_part('template-parts/header');
                     ?>
                 </div>
 
-                <div class="pt-8 border-t border-slate-100">
-                    <h3 class="text-3xl font-black text-slate-900 mb-8">Why teach with us?</h3>
-
-                    <div class="grid sm:grid-cols-2 gap-6">
-                        <div class="group bg-white p-8 rounded-3xl border border-slate-200 hover:shadow-[0_20px_50px_rgba(0,0,0,0.05)] transition-all duration-300 hover:-translate-y-1">
-                            <div class="w-14 h-14 bg-red-50 rounded-2xl flex items-center justify-center text-red-600 mb-6 group-hover:bg-red-600 group-hover:text-white transition-colors">
-                                <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" /></svg>
+                <!-- Text on how to become an instructor -->
+                <div id="process">
+                    <h3 class="text-3xl font-black text-slate-900 mb-8">How to become an instructor</h3>
+                    <div class="space-y-8 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-slate-300 before:to-transparent">
+                        
+                        <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+                            <div class="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-orange-600 text-white shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10">
+                                <span class="font-bold text-sm">1</span>
                             </div>
-                            <h4 class="font-bold text-xl text-slate-900 mb-3">Community Impact</h4>
-                            <p class="text-stone-600 leading-relaxed">
-                                Directly influence the lives of local students and help build a stronger Worcester community through education.
-                            </p>
+                            <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
+                                <h4 class="font-bold text-slate-900">Propose a Topic</h4>
+                                <p class="text-slate-600 text-sm mt-2">Send us a brief email with your course idea. It doesn't need to be fully fleshed out yet!</p>
+                            </div>
                         </div>
 
-                        <div class="group bg-white p-8 rounded-3xl border border-slate-200 hover:shadow-[0_20px_50px_rgba(0,0,0,0.05)] transition-all duration-300 hover:-translate-y-1">
-                            <div class="w-14 h-14 bg-blue-50 rounded-2xl flex items-center justify-center text-blue-600 mb-6 group-hover:bg-blue-600 group-hover:text-white transition-colors">
-                                <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                        <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+                            <div class="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-orange-600 text-white shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10">
+                                <span class="font-bold text-sm">2</span>
                             </div>
-                            <h4 class="font-bold text-xl text-slate-900 mb-3">Flexible Schedule</h4>
-                            <p class="text-stone-600 leading-relaxed">
-                                We offer various time slots for workshops to fit your professional life. Teach evenings, weekends, or online.
-                            </p>
+                            <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
+                                <h4 class="font-bold text-slate-900">Chat with Ruth</h4>
+                                <p class="text-slate-600 text-sm mt-2">A quick phone call to discuss scheduling, pricing, and curriculum needs.</p>
+                            </div>
                         </div>
+
+                         <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+                            <div class="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-orange-600 text-white shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10">
+                                <span class="font-bold text-sm">3</span>
+                            </div>
+                            <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
+                                <h4 class="font-bold text-slate-900">Schedule Your Class</h4>
+                                <p class="text-slate-600 text-sm mt-2">We handle the marketing and registration. You just show up and teach.</p>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
 
-            </div>
-
-            <div class="lg:col-span-5">
-                <div class="sticky top-8 space-y-8">
-
-                    <div class="bg-white rounded-[2.5rem] shadow-xl shadow-slate-200/50 border border-slate-100 overflow-hidden relative">
-                        <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-orange-600 to-orange-400"></div>
+            </div> 
+            <!-- Propose a class and has Ruth Seward information -->
+            <div class="lg:col-span-5 h-fit space-y-8" id="apply">
+                
+                <div class="bg-white rounded-[2rem] shadow-xl shadow-slate-200/50 border border-slate-100 overflow-hidden relative">
+                    <div class="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-orange-600 to-orange-400"></div>
+                    
+                    <div class="p-8">
+                        <div class="flex items-center justify-between mb-6">
+                            <h2 class="text-2xl font-black text-slate-900">Propose a Class</h2>
+                            <span class="flex h-3 w-3 relative">
+                              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                              <span class="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
+                            </span>
+                        </div>
                         
-                        <div class="p-8 md:p-10">
-                            <h2 class="text-2xl font-black text-slate-900 mb-2">Propose a Class</h2>
-                            <p class="text-slate-500 mb-8">Ready to start? Contact our coordinator directly.</p>
+                        <p class="text-slate-500 text-sm mb-8">Ready to start? Contact our coordinator directly to get the ball rolling.</p>
 
-                            <div class="flex items-center gap-5 mb-8 pb-8 border-b border-slate-100">
-                                <div class="w-16 h-16 rounded-2xl bg-slate-100 flex items-center justify-center text-slate-400 text-xl font-bold border border-slate-200">
-                                    <span class="text-2xl">RS</span>
-                                </div>
-                                <div>
-                                    <p class="font-bold text-xl text-slate-900">Ruth Seward</p>
-                                    <p class="text-sm text-orange-600 font-bold uppercase tracking-wide">Program Coordinator</p>
-                                </div>
+                        <div class="flex items-center gap-4 mb-8 p-4 bg-slate-50 rounded-xl border border-slate-100">
+                            <div class="w-14 h-14 rounded-full bg-white flex items-center justify-center text-slate-400 text-lg font-bold border border-slate-200 shadow-sm">
+                                RS
                             </div>
-
-                            <ul class="space-y-6">
-                                <li class="flex items-start group">
-                                    <div class="w-10 h-10 rounded-full bg-red-50 text-red-600 flex items-center justify-center shrink-0 mr-4 group-hover:bg-red-600 group-hover:text-white transition-colors">
-                                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
-                                    </div>
-                                    <div>
-                                        <span class="text-xs font-bold text-slate-400 uppercase tracking-wide block mb-1">Email</span>
-                                        <a href="mailto:sewardr@worcesterschools.net" class="text-slate-900 font-medium hover:text-orange-600 transition break-all">
-                                            sewardr@worcesterschools.net
-                                        </a>
-                                    </div>
-                                </li>
-
-                                <li class="flex items-start group">
-                                    <div class="w-10 h-10 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center shrink-0 mr-4 group-hover:bg-blue-600 group-hover:text-white transition-colors">
-                                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
-                                    </div>
-                                    <div>
-                                        <span class="text-xs font-bold text-slate-400 uppercase tracking-wide block mb-1">Phone / Cell</span>
-                                        <span class="block text-slate-900 font-medium">508–751–7612 (Office)</span>
-                                        <span class="block text-slate-900 font-medium">774–437–2788 (Cell)</span>
-                                    </div>
-                                </li>
-                            </ul>
+                            <div>
+                                <p class="font-bold text-lg text-slate-900 leading-none">Ruth Seward</p>
+                                <p class="text-xs text-orange-600 font-bold uppercase tracking-wide mt-1">Program Director</p>
+                            </div>
                         </div>
 
-                        <div class="bg-slate-50 p-6 border-t border-slate-100 text-center">
-                            <a href="mailto:sewardr@worcesterschools.net" class="block w-full bg-green-600 text-white font-bold py-4 rounded-xl hover:bg-green-500 transition-all shadow-lg hover:shadow-orange-600/20">
-                                Email Ruth Now &rarr;
+                        <ul class="space-y-4">
+                            <li class="flex items-center p-3 hover:bg-slate-50 rounded-lg transition-colors">
+                                <div class="w-8 h-8 rounded-full bg-red-100 text-red-600 flex items-center justify-center shrink-0 mr-3">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+                                </div>
+                                <a href="mailto:sewardr@worcesterschools.net" class="text-slate-900 font-medium text-sm hover:text-orange-600 transition truncate">
+                                    sewardr@worcesterschools.net
+                                </a>
+                            </li>
+                            <li class="flex items-center p-3 hover:bg-slate-50 rounded-lg transition-colors">
+                                <div class="w-8 h-8 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center shrink-0 mr-3">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
+                                </div>
+                                <div class="text-sm">
+                                    <span class="block text-slate-900 font-medium">508–751–7612</span>
+                                </div>
+                            </li>
+                        </ul>
+                        
+                        <div class="mt-8">
+                            <a href="mailto:sewardr@worcesterschools.net" class="inline-flex items-center justify-center bg-orange-600 text-white font-bold text-lg px-6 py-3 sm:px-10 md:px-16 lg:px-28 rounded-xl transition-all duration-300 ease-out hover:bg-orange-500 hover:shadow-[0_0_30px_rgba(234,88,12,0.6)] hover:-translate-y-1">
+                                Email Ruth Now 
+                                <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                             </a>
                         </div>
                     </div>
-
-                    <div class="bg-white rounded-3xl p-8 border border-slate-200/60">
-                        <h3 class="font-bold text-lg text-slate-900 mb-2">Have a quick question?</h3>
-                        <p class="text-stone-600 text-sm leading-relaxed mb-0">
-                            Don't hesitate to call or text the cell number listed above. We are happy to answer any questions about the curriculum or schedule.
-                        </p>
-                    </div>
-
                 </div>
+
+                <!-- Common questions that some people may have -->
+                <div class="bg-white rounded-[2rem] p-8 border border-slate-200">
+                    <h3 class="text-xl font-black text-slate-900 mb-6">Common Questions</h3>
+                    <div class="space-y-4">
+                        <details class="group [&_summary::-webkit-details-marker]:hidden">
+                            <summary class="flex justify-between items-center font-bold cursor-pointer list-none text-slate-900 hover:text-orange-600 transition-colors">
+                                <span>Do I need a teaching license?</span>
+                                <span class="transition group-open:rotate-180">
+                                    <svg class="w-5 h-5 text-orange-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path></svg>
+                                </span>
+                            </summary>
+                            <div class="text-slate-600 mt-3 text-sm leading-relaxed border-t border-slate-100 pt-3">
+                                Not at all! We are looking for experts in their field. Your passion and experience are your qualifications.
+                            </div>
+                        </details>
+                        
+                        <details class="group [&_summary::-webkit-details-marker]:hidden">
+                            <summary class="flex justify-between items-center font-bold cursor-pointer list-none text-slate-900 hover:text-orange-600 transition-colors">
+                                <span>How are instructors paid?</span>
+                                <span class="transition group-open:rotate-180">
+                                    <svg class="w-5 h-5 text-orange-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path></svg>
+                                </span>
+                            </summary>
+                            <div class="text-slate-600 mt-3 text-sm leading-relaxed border-t border-slate-100 pt-3">
+                                Instructors are paid a competitive hourly rate based on the class type and duration. Contact Ruth for specific rates.
+                            </div>
+                        </details>
+
+                        <details class="group [&_summary::-webkit-details-marker]:hidden">
+                            <summary class="flex justify-between items-center font-bold cursor-pointer list-none text-slate-900 hover:text-orange-600 transition-colors">
+                                <span>What if I've never taught?</span>
+                                <span class="transition group-open:rotate-180">
+                                    <svg class="w-5 h-5 text-orange-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path></svg>
+                                </span>
+                            </summary>
+                            <div class="text-slate-600 mt-3 text-sm leading-relaxed border-t border-slate-100 pt-3">
+                                That's okay! We help with curriculum planning and classroom management tips to ensure you feel confident.
+                            </div>
+                        </details>
+                    </div>
+                </div>
+
+            </div> 
+            </div> 
+            <!-- Section on why teach with us -->
+        <div class="mt-24 pt-24 border-t border-slate-200">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h3 class="text-4xl font-black text-slate-900 mb-4">Why teach with us?</h3>
+                <p class="text-slate-600 text-lg">Join a community dedicated to growth, flexibility, and making a real impact in Worcester.</p>
             </div>
 
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="group bg-white p-8 rounded-3xl border border-slate-200 hover:border-orange-200 hover:shadow-2xl hover:shadow-orange-500/10 transition-all duration-500">
+                    <div class="w-14 h-14 bg-red-50 rounded-2xl flex items-center justify-center text-red-600 mb-6 group-hover:scale-110 group-hover:bg-red-600 group-hover:text-white transition-all duration-300">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" /></svg>
+                    </div>
+                    <h4 class="font-bold text-xl text-slate-900 mb-3">Community Impact</h4>
+                    <p class="text-slate-600 text-sm leading-relaxed">Directly influence local students and build a stronger Worcester through your expertise.</p>
+                </div>
+
+                <div class="group bg-white p-8 rounded-3xl border border-slate-200 hover:border-orange-200 hover:shadow-2xl hover:shadow-orange-500/10 transition-all duration-500">
+                    <div class="w-14 h-14 bg-blue-50 rounded-2xl flex items-center justify-center text-blue-600 mb-6 group-hover:scale-110 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                    </div>
+                    <h4 class="font-bold text-xl text-slate-900 mb-3">Flexible Schedule</h4>
+                    <p class="text-slate-600 text-sm leading-relaxed">Teach evenings, or online. We work around your existing professional life.</p>
+                </div>
+
+                <div class="group bg-white p-8 rounded-3xl border border-slate-200 hover:border-orange-200 hover:shadow-2xl hover:shadow-orange-500/10 transition-all duration-500">
+                    <div class="w-14 h-14 bg-green-50 rounded-2xl flex items-center justify-center text-green-600 mb-6 group-hover:scale-110 group-hover:bg-green-600 group-hover:text-white transition-all duration-300">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                    </div>
+                    <h4 class="font-bold text-xl text-slate-900 mb-3">Earn Extra Income</h4>
+                    <p class="text-slate-600 text-sm leading-relaxed">Receive competitive compensation for your time, preparation, and expert knowledge.</p>
+                </div>
+
+                <div class="group bg-white p-8 rounded-3xl border border-slate-200 hover:border-orange-200 hover:shadow-2xl hover:shadow-orange-500/10 transition-all duration-500">
+                    <div class="w-14 h-14 bg-purple-50 rounded-2xl flex items-center justify-center text-purple-600 mb-6 group-hover:scale-110 group-hover:bg-purple-600 group-hover:text-white transition-all duration-300">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" /></svg>
+                    </div>
+                    <h4 class="font-bold text-xl text-slate-900 mb-3">Expand Your Reach</h4>
+                    <p class="text-slate-600 text-sm leading-relaxed">Network with other industry professionals and market your skills to a wider audience.</p>
+                </div>
+            </div>
         </div>
+
     </div>
 </div>
 
-<section class="py-4 px-6 pt-6 pt-12 pb-12 bg-white">
-    <div class="max-w-7xl mx-auto rounded-[3rem] p-8 pl-4 sm:pl-8 overflow-hidden relative">
-        <div class="absolute top-0 right-0 w-1/2 h-full"></div>
-        
-        <div class="relative z-14 max-w-2xl pl-[6px]">
-            <h2 class="text-5xl md:text-6xl font-black text-black mb-6">Ready to <span class="text-orange-500 text-outline">start?</span></h2>
-            <p class="text-stone-900 text-lg mb-10">Whether you're an experienced instructor or trying teaching for the first time, our team is here to support you every step of the way. </p>
-            <div class="flex flex-wrap gap-4">
-                <a href="<?php echo get_permalink( get_page_by_path('contact-us')) ; ?>" class="group inline-flex items-center justify-center bg-orange-600 text-white font-bold text-lg px-6 py-4 rounded-xl shadow-[0_0_20px_rgba(234,88,12,0.5)] hover:bg-orange-500 hover:shadow-[0_0_30px_rgba(234,88,12,0.6)] hover:-translate-y-1 transition-all duration-300">Contact Us</a>
-                <a href="<?php echo get_permalink( wc_get_page_id('shop')); ?>" class="group inline-flex items-center justify-center bg-orange-600 text-white font-bold text-lg px-6 py-4 rounded-xl shadow-[0_0_20px_rgba(234,88,12,0.5)] hover:bg-orange-500 hover:shadow-[0_0_30px_rgba(234,88,12,0.6)] hover:-translate-y-1 transition-all duration-300">Courses</a>
-            </div>
-        </div>
-    </div>
-</section>
-
+<!-- Footer -->
 <?php get_template_part('template-parts/footer'); ?>

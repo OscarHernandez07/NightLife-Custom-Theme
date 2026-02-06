@@ -176,49 +176,40 @@ defined( 'ABSPATH' ) || exit;
                 <!-- update cart section -->
                 <div class="p-6 bg-slate-50 flex flex-col md:flex-row md:items-center justify-between gap-4 mt-4 md:mt-0">
 
-                    <!-- update cart button -->
-                    <button type="submit"
-                            name="update_cart"
-                            class="w-full md:w-auto bg-green-700 text-white px-8 py-3 rounded-xl font-bold text-sm hover:bg-green-600 transition shadow-lg update-cart">
+                    <button type="submit" 
+                            name="update_cart" 
+                            value="Update cart" 
+                            class="w-full md:w-auto bg-green-700 text-white px-8 py-3 rounded-xl font-bold text-sm hover:bg-green-600 transition shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
+                            disabled>
                         Update Cart
                     </button>
 
-                    <!-- security nonce -->
                     <?php wp_nonce_field( 'woocommerce-cart', 'woocommerce-cart-nonce' ); ?>
-
-                    <!-- hidden input woo checks for updates -->
-                    <input type="hidden" name="update_cart" value="Update cart">
-
+                    
                 </div>
             </div>
         </form>
 
         <!-- cart totals sidebar -->
-        <div class="lg:col-span-4 w-full sticky top-8">
+        <div class="lg:col-span-4 w-full sticky top-8 self-start h-fit z-10">
             <div class="bg-white rounded-[2rem] border border-slate-200 shadow-xl p-6 md:p-8 relative overflow-hidden">
 
-                <!-- orange accent bar -->
                 <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-orange-600 to-orange-400"></div>
 
                 <h2 class="text-xl font-black text-slate-900 mb-6 uppercase tracking-tight">
                     Cart Totals
                 </h2>
 
-                <!-- woo totals table -->
                 <div class="cart-totals-content">
                     <?php woocommerce_cart_totals(); ?>
                 </div>
 
-                <!-- checkout button -->
                 <div class="mt-8">
                     <a href="<?php echo wc_get_checkout_url(); ?>"
-                       class="block w-full text-center bg-orange-600 text-white font-black py-5 rounded-2xl text-lg hover:bg-orange-500 transition-all shadow-lg shadow-orange-600/30">
+                    class="block w-full text-center bg-orange-600 text-white font-black py-5 rounded-2xl text-lg hover:bg-orange-500 transition-all shadow-lg shadow-orange-600/30">
                         Checkout →
                     </a>
 
-                    <p class="text-center text-slate-400 text-[10px] mt-4 font-bold tracking-widest uppercase">
-                        Locked & Secured SSL
-                    </p>
                 </div>
             </div>
         </div>
@@ -226,6 +217,35 @@ defined( 'ABSPATH' ) || exit;
     </div>
 </div>
 </div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    let timeout;
+    const cartForm = document.querySelector('.woocommerce-cart-form');
+    const updateBtn = document.querySelector('button[name="update_cart"]');
+
+    // Monitor all quantity inputs
+    cartForm.addEventListener('change', function(e) {
+        if (e.target.classList.contains('qty')) {
+            // Visualize that work is happening
+            updateBtn.removeAttribute('disabled');
+            updateBtn.classList.remove('opacity-50');
+            
+            // Optional: Trigger click automatically after 1 second of inactivity
+            clearTimeout(timeout);
+            timeout = setTimeout(function() {
+                updateBtn.click();
+            }, 1000); 
+        }
+    });
+
+    // Ensure WooCommerce standard JS doesn't keep the button stuck
+    jQuery( document.body ).on( 'updated_cart_totals', function() {
+        // Re-disable button after AJAX update completes
+        updateBtn.setAttribute('disabled', 'disabled');
+    });
+});
+</script>
 
 <?php get_template_part('template-parts/footer'); ?>
 <!-- footer -->
@@ -285,4 +305,6 @@ defined( 'ABSPATH' ) || exit;
     display: none !important;
     content: none !important;
 }
+
+
 </style>
