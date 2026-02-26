@@ -26,14 +26,12 @@ get_template_part('template-parts/header');
         <div class="bg-white rounded-[2.5rem] shadow-2xl shadow-slate-200/60 p-8 md:p-16 border border-slate-200">
             
             <div class="mb-10">
-                <!-- Text that ask to "Send us a Message" -->
                 <h2 class="text-2xl font-bold text-slate-900 mb-2">Send us a Message</h2>
                 <div class="h-1 w-[220px] bg-orange-500 rounded-full"></div>
             </div>
-            <!-- Calls the form by the id -->
+
             <div class="modern-form-wrapper">
-                <!-- prints the form -->
-                <?php echo do_shortcode('[form id="19789"]'); ?>
+                <?php echo do_shortcode('[contact-form-7 id="449add3" title="Night Life Form"]'); ?>
             </div>
 
         </div>

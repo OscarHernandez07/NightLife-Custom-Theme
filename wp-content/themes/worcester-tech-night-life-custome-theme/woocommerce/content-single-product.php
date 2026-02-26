@@ -64,6 +64,13 @@ global $product;
             <?php echo $product->get_price_html(); ?>
           </div>
 
+          <!-- Short Description -->
+          <?php if ( has_excerpt() ) : ?>
+            <div class="text-gray-700 leading-relaxed">
+              <?php echo apply_filters( 'woocommerce_short_description', get_the_excerpt() ); ?>
+            </div>
+          <?php endif; ?>
+
           <!-- Add to Cart Form -->
           <form class="" method="post" enctype="multipart/form-data">
             <?php woocommerce_template_single_add_to_cart(); ?>
