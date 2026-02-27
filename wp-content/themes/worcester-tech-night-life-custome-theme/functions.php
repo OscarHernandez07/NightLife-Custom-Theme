@@ -97,3 +97,34 @@ function events_calendar_shortcode() {
     ';
 }
 add_shortcode('events_calendar', 'events_calendar_shortcode');
+
+function force_load_variation_scripts() {
+    if ( is_product() ) {
+        wp_enqueue_script( 'wc-add-to-cart-variation' );
+    }
+}
+add_action( 'wp_enqueue_scripts', 'force_load_variation_scripts' );
+
+// Search bar
+add_action('pre_get_posts', function($query) {
+
+    if (!is_admin() && $query->is_main_query() && $query->is_search()) {
+
+        // Only search products
+        $query->set('post_type', 'product');
+
+        // Only published
+        $query->set('post_status', 'publish');
+
+        // Only this year's classes
+        $query->set('tax_query', array(
+            array(
+                'taxonomy' => 'product_cat',
+                'field'    => 'slug',
+                'terms'    => '2026-classes',
+            ),
+        ));
+
+    }
+
+});

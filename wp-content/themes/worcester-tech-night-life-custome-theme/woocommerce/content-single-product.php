@@ -72,9 +72,14 @@ global $product;
           <?php endif; ?>
 
           <!-- Add to Cart Form -->
-          <form class="" method="post" enctype="multipart/form-data">
-            <?php woocommerce_template_single_add_to_cart(); ?>
-          </form>
+          <div id="product-<?php the_ID(); ?>" <?php wc_product_class('md:w-1/2 p-8 md:p-10 space-y-6', $product); ?>>
+            <div class="cart-action-wrapper">
+              <?php 
+              woocommerce_template_single_add_to_cart();?>
+            </div>
+            <div class="border=t border-gray-200 pt-4"></div>
+
+          </div>
 
           <!-- Divider -->
           <div class="border-t border-gray-200 pt-4"></div>
