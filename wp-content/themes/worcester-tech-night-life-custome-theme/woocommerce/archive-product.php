@@ -90,13 +90,25 @@ do_action( 'woocommerce_before_main_content' );
                       </div>
                     <?php endif; ?>
                   </a>
+
+                  <!-- This say if it's in stock or not -->
+                    <?php if ( $product->is_in_stock() ) : ?>
+                      <div class="absolute top-4 left-4 bg-green-500/90 backdrop-blur-md text-white text-sm font-black px-4 py-2 rounded-2xl shadow-sm">
+                        In Stock
+                      </div>
+                    <?php else : ?>
+                      <div class="absolute top-4 left-4 bg-red-500/90 backdrop-blur-md text-white text-sm font-black px-4 py-2 rounded-2xl shadow-sm">
+                        Out of Stock
+                      </div>
+                    <?php endif; ?>
+                  </div>
+
                       <!-- This get's the price -->
                   <?php if ( $product->get_price_html() ) : ?>
                     <div class="absolute top-4 right-4 bg-white/90 backdrop-blur-md text-slate-900 text-sm font-black px-4 py-2 rounded-2xl shadow-sm">
                       <?php echo $product->get_price_html(); ?>
                     </div>
                   <?php endif; ?>
-                </div>
                   
                 <!-- This get's the title of the product -->
                 <div class="p-8 flex flex-col flex-grow">

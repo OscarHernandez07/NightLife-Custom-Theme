@@ -24,33 +24,6 @@
         <div id="hero-toast" role="alert"
             class="mx-auto mb-6 flex max-w-4xl items-start gap-3 rounded-xl bg-white/5 px-5 py-4 shadow-md">
 
-            <!-- Toast text content -->
-            <div class="flex-1">
-                <p class="text-sm font-semibold text-white">
-                    Notice
-                </p>
-
-                <p class="mt-1 text-sm text-white">
-                    This site was recently updated. If you experience any issues, please contact
-                    <a href="mailto:seward@example.com" class="font-medium text-orange-600 hover:underline">
-                        Ruth Seward
-                    </a>.
-                </p>
-            </div>
-
-            <!-- Close toast button -->
-            <button 
-                type="button" 
-                aria-label="Dismiss notification"
-                onclick="this.closest('#hero-toast').classList.add('opacity-0'); setTimeout(() => this.closest('#hero-toast').remove(), 300)"
-                class="mt-1 rounded-md p-1 text-neutral-400 focus:outline-none focus:ring-2 focus:ring-blue-500">
-
-                <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                </svg>
-            </button>
-        </div>
-
         <!-- Main hero text -->
         <div class="max-w-4xl space-y-8 animate-fade-in-up mx-auto">
 
